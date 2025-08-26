@@ -1,9 +1,9 @@
 # VMK-SPI-extractor
 Script to extract the TPM header and key from .csv-files generated using the DSview software. 
 
-**************************
-* Creating the .csv file *
-* ************************
+
+Creating the .csv file:
+
 Using a logical analyzer connect to the following pins of an SPI chip:
 MOSI, MISO, CS, CLK
 
