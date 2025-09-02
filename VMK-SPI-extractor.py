@@ -24,6 +24,7 @@ df = pandas.read_csv(csv_path)                                          # Use pa
 miso_data = "".join(df['0:SPI: MISO data'].tolist()).lower()            # Add the relevant column into a list in python and then join that list into a single lower case string 
 
 vmk_header_regex = re.compile(r"0{7}12c0{7}1000{7}10[0-6]0{7}1000{7}10[1-9]0{7}1000{7}10[0-1]0{7}1000{7}10[0-5]0{7}1200{7}1000{7}100")          # The regex for the VMK header (here with padding as it appears in the DSview extraction)
+# Each byte is padded with a prefix of 4 bytes. The relevant byte 4c looks like this: 000000014c. 
 
 match = vmk_header_regex.search(miso_data)
 start_of_vmk = match.end()                                                  # The start of the vmk is at the end of the header
@@ -44,4 +45,5 @@ if match:
 else:
     print("VMK header not found :(")
     
-# Each byte is padded with a prefix of 4 bytes. The relevant byte 4c looks like this: 000000014c. 
+
+
