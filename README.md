@@ -1,5 +1,6 @@
 # VMK-SPI-extractor
 Script to extract the TPM header and key from .csv-files generated using the DSview software. 
+
 It must be noted that the DSview software already has an SPI TPM interpreter - this project is therefore made purely for learning purposes, to understand the process better, and to use the knowledge e.g. to extract the header and key from chips that use the LPC protocol, and other challenges not already covered by others. 
 
 
